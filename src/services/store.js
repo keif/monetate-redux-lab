@@ -2,7 +2,7 @@ import { compose, createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import monetateConfig from "../../config/monetate.json";
-import monetateTrackSDK from "monetate-track-sdk";
+import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
 
 export default initialState => {
   initialState =
@@ -36,12 +36,12 @@ export default initialState => {
     instance: monetateConfig.instance,
     shortname: monetateConfig.shortname,
   };
-  store.dispatch(monetateTrackSDK.monetateAccountActions.configureAccount(monetateAccountConfig));
+  store.dispatch(monetateStateStoreIntegrationSDK.monetateAccountActions.configureAccount(monetateAccountConfig));
 
   const monetateEngineRequestDataConfig = {
     monetateId: monetateConfig.monetateId,
   };
-  store.dispatch(monetateTrackSDK.monetateEngineRequestDataActions.configureEngineRequestData(monetateEngineRequestDataConfig));
+  store.dispatch(monetateStateStoreIntegrationSDK.monetateEngineRequestDataActions.configureEngineRequestData(monetateEngineRequestDataConfig));
 
   return store;
 };

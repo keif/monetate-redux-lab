@@ -5,8 +5,8 @@ import Filter from '../Shelf/Filter';
 import FloatCart from '../FloatCart';
 
 import { connect } from "react-redux";
-import monetateTrackSDK from "monetate-track-sdk";
-const { monetateTrack, MonetateEventTypes } = monetateTrackSDK;
+import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
+const { monetateTrack, MonetateEventTypes } = monetateStateStoreIntegrationSDK;
 
 @monetateTrack([
   { type: MonetateEventTypes.ContextUserAgent, data: { userAgent: window.navigator.userAgent } },

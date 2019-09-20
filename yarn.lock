@@ -8126,9 +8126,9 @@ mocha@^5.2.0:
     mkdirp "0.5.1"
     supports-color "5.4.0"
 
-"monetate-track-sdk@git+ssh://git@github.com:monetate/monetate-track-sdk.git":
+"monetate-state-store-integration-sdk@git+ssh://git@github.com:monetate/monetate-state-store-integration-sdk.git":
   version "0.0.1"
-  resolved "git+ssh://git@github.com:monetate/monetate-track-sdk.git#2a5fc88f24559baf0f33ef7cf756583108cf02a0"
+  resolved "git+ssh://git@github.com:monetate/monetate-state-store-integration-sdk.git#a458854d28842934eeb2023f3a04b4a0871b31e6"
   dependencies:
     axios "^0.19.0"
     dotenv "^8.0.0"

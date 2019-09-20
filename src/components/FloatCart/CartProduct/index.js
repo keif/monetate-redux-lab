@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Thumb from './../../Thumb';
 import { formatPrice } from '../../../services/util';
 import { connect } from "react-redux";
-import monetateTrackSDK from "monetate-track-sdk";
-const { monetateTrack, MonetateEventTypes } = monetateTrackSDK;
+import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
+const { monetateTrack, MonetateEventTypes } = monetateStateStoreIntegrationSDK;
 
 @monetateTrack({ type: MonetateEventTypes.DecisionRequest, data: { requestId: "123456" } })
 class CartProduct extends Component {

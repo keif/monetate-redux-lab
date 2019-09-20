@@ -4,9 +4,9 @@ import cartReducer from './cart/reducer';
 import totalReducer from './total/reducer';
 import filtersReducer from './filters/reducer';
 import sortReducer from './sort/reducer';
-import monetateTrackSDK from "monetate-track-sdk";
+import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
 
-const { monetateReducers } = monetateTrackSDK;
+const { monetateReducers } = monetateStateStoreIntegrationSDK;
 
 export default combineReducers({
   ...monetateReducers,
