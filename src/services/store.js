@@ -2,7 +2,7 @@ import { compose, createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import monetateConfig from "../../config/monetate.json";
-import * as monetateTrackSDK from "monetate-track-sdk";
+import monetateTrackSDK from "monetate-track-sdk";
 
 export default initialState => {
   initialState =

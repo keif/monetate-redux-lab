@@ -4,7 +4,7 @@ import cartReducer from './cart/reducer';
 import totalReducer from './total/reducer';
 import filtersReducer from './filters/reducer';
 import sortReducer from './sort/reducer';
-import * as monetateTrackSDK from "monetate-track-sdk";
+import monetateTrackSDK from "monetate-track-sdk";
 
 const { monetateReducers } = monetateTrackSDK;
 

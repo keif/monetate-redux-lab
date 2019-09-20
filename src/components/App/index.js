@@ -5,7 +5,7 @@ import Filter from '../Shelf/Filter';
 import FloatCart from '../FloatCart';
 
 import { connect } from "react-redux";
-import * as monetateTrackSDK from "monetate-track-sdk";
+import monetateTrackSDK from "monetate-track-sdk";
 const { monetateTrack, MonetateEventTypes } = monetateTrackSDK;
 
 @monetateTrack([

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Thumb from './../../Thumb';
 import { formatPrice } from '../../../services/util';
 import { connect } from "react-redux";
-import * as monetateTrackSDK from "monetate-track-sdk";
+import monetateTrackSDK from "monetate-track-sdk";
 const { monetateTrack, MonetateEventTypes } = monetateTrackSDK;
 
 @monetateTrack({ type: MonetateEventTypes.DecisionRequest, data: { requestId: "123456" } })
