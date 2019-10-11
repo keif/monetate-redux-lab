@@ -57,7 +57,6 @@ class FloatCart extends Component {
     }
 
     updateCart(cartProducts);
-    this.openFloatCart();
   };
 
   removeProduct = product => {

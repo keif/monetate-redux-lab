@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Selectbox = ({ options, classes, handleOnChange }) => {
+const Selectbox = ({ options, classes, handleOnChange, value }) => {
   const createOptions = options =>
     options.map(o => (
       <option value={o.value} key={o.value}>
@@ -10,7 +10,7 @@ const Selectbox = ({ options, classes, handleOnChange }) => {
     ));
 
   return (
-    <select onChange={e => handleOnChange(e.target.value)} className={classes}>
+    <select onChange={e => handleOnChange(e.target.value)} className={classes} value={value}>
       {createOptions(options)}
     </select>
   );

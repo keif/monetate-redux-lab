@@ -6,13 +6,13 @@ import filtersReducer from './filters/reducer';
 import sortReducer from './sort/reducer';
 import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
 
-const { monetateReducers } = monetateStateStoreIntegrationSDK;
+const { monetateReducers, monetateReduceReducers } = monetateStateStoreIntegrationSDK;
 
-export default combineReducers({
+export default monetateReduceReducers(combineReducers({
   ...monetateReducers,
   shelf: shelfReducer,
   cart: cartReducer,
   total: totalReducer,
   filters: filtersReducer,
   sort: sortReducer
-});
+}));

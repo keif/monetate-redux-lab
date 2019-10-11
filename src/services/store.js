@@ -5,8 +5,6 @@ import monetateConfig from "../../config/monetate.json";
 import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
 
 export default initialState => {
-  initialState =
-    JSON.parse(window.localStorage.getItem('state')) || initialState;
   const middleware = [thunk];
 
   const store = createStore(
@@ -18,17 +16,6 @@ export default initialState => {
         window.__REDUX_DEVTOOLS_EXTENSION__()
     )
   );
-
-  store.subscribe(() => {
-    const state = store.getState();
-    console.log(state);
-    const persist = {
-      cart: state.cart,
-      total: state.total
-    };
-
-    window.localStorage.setItem('state', JSON.stringify(persist));
-  });
 
   const monetateAccountConfig = {
     domain: monetateConfig.domain,
