@@ -38,7 +38,7 @@
     "jest-resolve": "23.6.0",
     "jest-watch-typeahead": "^0.2.1",
     "mini-css-extract-plugin": "0.5.0",
-    "monetate-state-store-integration-sdk": "git+ssh://git@github.com:monetate/monetate-state-store-integration-sdk.git",
+    "monetate-state-store-integration-sdk": "git+ssh://git@github.com:monetate/monetate-state-store-integration-sdk.git#master",
     "moxios": "^0.4.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.2.1",
