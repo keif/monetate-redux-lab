@@ -6,7 +6,7 @@ import FloatCart from '../FloatCart';
 
 import { connect } from "react-redux";
 import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
-const { monetateTrack, MonetateEventTypes, MonetateStoreEditor } = monetateStateStoreIntegrationSDK;
+const { monetateTrack, MonetateEventTypes } = monetateStateStoreIntegrationSDK;
 
 @monetateTrack([
   { type: MonetateEventTypes.ContextUserAgent, data: { userAgent: window.navigator.userAgent } },
@@ -19,7 +19,6 @@ class App extends React.Component {
         <main>
           <Filter />
           <Shelf />
-          <MonetateStoreEditor dispatch={this.props.dispatch} state={this.props.state} />
         </main>
         <FloatCart />
       </React.Fragment>
