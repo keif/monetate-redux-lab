@@ -1,19 +1,17 @@
-import { compose, createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import monetateConfig from "../../config/monetate.json";
 import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 
-export default initialState => {
+export default () => {
   const middleware = [thunk];
 
   const store = createStore(
     rootReducer,
-    initialState,
-    compose(
-      applyMiddleware(...middleware),
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
-        window.__REDUX_DEVTOOLS_EXTENSION__()
+    composeWithDevTools(
+      applyMiddleware(...middleware)
     )
   );
 
