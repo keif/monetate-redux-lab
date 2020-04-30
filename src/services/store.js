@@ -22,11 +22,6 @@ export default () => {
     shortname: monetateConfig.shortname,
   };
   store.dispatch(monetateStateStoreIntegrationSDK.monetateAccountActions.configureAccount(monetateAccountConfig));
-
-  const monetateEngineRequestDataConfig = {
-    monetateId: monetateConfig.monetateId,
-  };
-  store.dispatch(monetateStateStoreIntegrationSDK.monetateEngineRequestDataActions.configureEngineRequestData(monetateEngineRequestDataConfig));
-
+ 
   return store;
 };
