@@ -20,6 +20,7 @@ export default () => {
     name: monetateConfig.name,
     instance: monetateConfig.instance,
     shortname: monetateConfig.shortname,
+    restrictedStates: monetateConfig.restrictedStates
   };
   store.dispatch(monetateStateStoreIntegrationSDK.monetateAccountActions.configureAccount(monetateAccountConfig));
  
