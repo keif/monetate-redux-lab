@@ -14,7 +14,7 @@ const sortBy = [
 const Sort = ({ updateSort, sort }) => (
   <div className="sort">
     Order by
-    <Selectbox options={sortBy} handleOnChange={value => updateSort(value)} />
+    <Selectbox options={sortBy} handleOnChange={value => updateSort(value)} value={sort}/>
   </div>
 );
 
