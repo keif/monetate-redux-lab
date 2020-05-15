@@ -14,7 +14,6 @@ class FloatCart extends Component {
     loadCart: PropTypes.func.isRequired,
     updateCart: PropTypes.func.isRequired,
     cartProducts: PropTypes.array.isRequired,
-    newProduct: PropTypes.object,
     removeProduct: PropTypes.func,
     productToRemove: PropTypes.object
   };
@@ -24,10 +23,6 @@ class FloatCart extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.newProduct !== this.props.newProduct) {
-      this.addProduct(nextProps.newProduct);
-    }
-
     if (nextProps.productToRemove !== this.props.productToRemove) {
       this.removeProduct(nextProps.productToRemove);
     }
@@ -39,24 +34,6 @@ class FloatCart extends Component {
 
   closeFloatCart = () => {
     this.setState({ isOpen: false });
-  };
-
-  addProduct = product => {
-    const { cartProducts, updateCart } = this.props;
-    let productAlreadyInCart = false;
-
-    cartProducts.forEach(cp => {
-      if (cp.id === product.id) {
-        cp.quantity += product.quantity;
-        productAlreadyInCart = true;
-      }
-    });
-
-    if (!productAlreadyInCart) {
-      cartProducts.push(product);
-    }
-
-    updateCart(cartProducts);
   };
 
   removeProduct = product => {
@@ -178,7 +155,6 @@ class FloatCart extends Component {
 
 const mapStateToProps = state => ({
   cartProducts: state.cart.products,
-  newProduct: state.cart.productToAdd,
   productToRemove: state.cart.productToRemove,
   cartTotal: state.total.data
 });
