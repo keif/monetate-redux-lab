@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import monetateConfig from "../../config/monetate.json";
-import monetateStateStoreIntegrationSDK from "monetate-state-store-integration-sdk";
+import  {monetateAccountActions } from "monetate-state-store-integration-sdk";
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 
 export default () => {
@@ -22,7 +22,7 @@ export default () => {
     shortname: monetateConfig.shortname,
     restrictedStates: monetateConfig.restrictedStates
   };
-  store.dispatch(monetateStateStoreIntegrationSDK.monetateAccountActions.configureAccount(monetateAccountConfig));
+  store.dispatch(monetateAccountActions.configureAccount(monetateAccountConfig));
  
   return store;
 };

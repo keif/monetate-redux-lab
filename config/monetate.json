@@ -1,7 +1,7 @@
 {
-    "domain": "monetate.mybigcommerce.com",
-    "name": "a-3e41bf76",
+    "domain": "localhost.org",
+    "name": "a-701b337c",
     "instance": "p",
-    "shortname": "monetate-browser-testing",
+    "shortname": "localhost",
     "restrictedStates": ["cart"]
 }

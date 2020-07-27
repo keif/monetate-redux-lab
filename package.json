@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "7.2.2",
+    "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@svgr/webpack": "4.1.0",
     "axios": "^0.18.0",
@@ -61,12 +61,13 @@
     "terser-webpack-plugin": "1.2.2",
     "url-loader": "1.1.2",
     "webpack": "4.28.3",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "3.1.14",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"cd ./node_modules/monetate-state-store-integration-sdk && yarn && yarn build && cd .. && cd .. && node scripts/start.js\"",
+    "start": "concurrently \"npm run server\" \" node scripts/start.js\"",
     "server": "nodemon server/app",
     "wdio": "wdio",
     "build": "node scripts/build.js",
@@ -130,7 +131,7 @@
   ],
   "devDependencies": {
     "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/plugin-syntax-decorators": "^7.2.0",
