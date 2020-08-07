@@ -14,18 +14,10 @@ class Hero extends Component {
     super(props);
     this.state = {
       image: require(`../../static/hero.jpeg`),
-      isMouseOver: false,
+      isMouseOver: false
     };
     this.handleMouseOut = this.handleMouseOut.bind(this);
-    this.props.updateImage(this.state.image)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const { image: nextImage } = nextProps;
-
-    if (nextImage !== `` && nextImage !== this.props.image) {
-      this.props.updateImage(nextImage)
-    }
+    this.props.updateImage(this.state.image);
   }
 
   handleMouseOver = () => {

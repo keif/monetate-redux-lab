@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import { connect } from 'react-redux';
 import { updateSort } from '../../../services/sort/actions';
@@ -26,6 +26,7 @@ Sort.propTypes = {
 const mapStateToProps = state => ({
   sort: state.sort.type
 });
+
 
 export default connect(
   mapStateToProps,
