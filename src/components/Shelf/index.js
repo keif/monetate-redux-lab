@@ -53,13 +53,13 @@ class Shelf extends Component {
     const { isLoading } = this.state;
 
     return (
-      <React.Fragment>
+      <>
         {isLoading && <Spinner />}
         <div className="shelf-container">
           <ShelfHeader productsLength={products.length} />
           <ProductList products={products} />
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }

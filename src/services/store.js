@@ -23,6 +23,6 @@ export default () => {
     restrictedStates: monetateConfig.restrictedStates
   };
   store.dispatch(monetateAccountActions.configureAccount(monetateAccountConfig));
- 
+
   return store;
 };

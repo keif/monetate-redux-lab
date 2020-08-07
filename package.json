@@ -1,5 +1,5 @@
 {
-  "name": "monetate-redux-sdk-sample",
+  "name": "monetate-redux-sdk-lab",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -73,7 +73,9 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "test:coverage": "npm run test -- --coverage",
-    "format": "prettier --write \"**/*.+(js|json|css)\""
+    "format": "prettier --write \"**/*.+(js|json|css)\"",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -145,6 +147,7 @@
     "enzyme-to-json": "^3.3.4",
     "fetch-mock": "^7.2.5",
     "firebase-tools": "^6.2.2",
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.10.0",
     "nodemon": "^1.18.6",
     "prop-types": "^15.6.2",

@@ -20,7 +20,7 @@ main {
   display: flex;
   padding: 20px 2%;
   max-width: 1200px;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -86,7 +86,6 @@ main {
       display: flex;
       flex-wrap: wrap;
       padding: 2%;
-      margin-top: 42px;
     }
 
     .filters {
