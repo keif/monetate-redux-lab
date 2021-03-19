@@ -49,8 +49,9 @@ class Hero extends Component {
 // export default connect()(Hero);
 
 const mapStateToProps = state => ({
-  image: state.hero.image
+    image: state.hero.image
 });
+
 
 
 export default connect(

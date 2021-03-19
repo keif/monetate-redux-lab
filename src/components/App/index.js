@@ -4,6 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import FloatCart from '../FloatCart';
 import Hero from '../Hero';
+import Lightbox from '../Lightbox';
 
 import Shelf from '../Shelf';
 import Filter from '../Shelf/Filter';
@@ -27,6 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <Lightbox/>
         <header>
           <img
             alt={`Punk Hand Store`}
